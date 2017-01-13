@@ -48,7 +48,13 @@
       return 0;
     } else {
       var a = str.split(",");
-      return a.length;
+      var res = 0;
+      for(var i=0;i<a.length;i++){
+        if(a[i] && a[i].replace(" ","")){
+          res++;
+        }
+      }
+      return res;
     }
   };
 })();
