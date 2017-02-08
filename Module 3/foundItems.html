@@ -1,0 +1,13 @@
+<table>
+  <tr ng-repeat="item in narrow.found">
+    <td>{{ item.name }}</td>
+    <td>{{ item.short_name }}</td>
+    <td>{{ item.description }}</td>
+    <td>
+      <button ng-click="narrow.onRemove({index: $index})" class="btn btn-primary">Don't want this one!</button>
+    </td>
+  </tr>
+</table>
+<div class="message" ng-if="narrow.showMessage()">
+  Nothing found
+</div>
